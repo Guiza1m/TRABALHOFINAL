@@ -538,7 +538,7 @@ public class Experimento {
 		verificadorDeParametrosString(algoritmo);
 
         //chamo o metodo que retorna o melhor resultado por algoritmo
-        Resultado auxiliar = getMelhorResultadoPorAlgoritmo(medida, algoritmo);
+        Resultado auxiliar = getMelhorResultadoPorAlgoritmo(algoritmo, medida);
         //se o resultado retornado for nulo
         if (auxiliar == null)
             return null;//retorno nulo
