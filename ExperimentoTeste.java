@@ -37,9 +37,12 @@ public class ExperimentoTeste
 		Algoritmo objetoAlgoritmo1 = new Algoritmo("Algoritmo1", parametros);
 		Algoritmo objetoAlgoritmo2 = new Algoritmo("Algoritmo2", parametros);	
 		System.out.println(objetoAlgoritmo1.getNome());
+
+		//Criei o vetor para não ter q iniciar o método várias vezes
+		float [] vetor = objetoAlgoritmo1.getParametros();
 		for (int contador = 0; contador < 3; contador++) 
 		{
-			System.out.println(objetoAlgoritmo1.getParametros()[contador]);
+			System.out.println(vetor[contador]);
 		}
 
 		//Total = 2 Métodos
@@ -116,10 +119,13 @@ public class ExperimentoTeste
 		resultado5.addAvaliacao(valor1);
 		resultado5.addAvaliacao(valor2);
 		resultado5.addAvaliacao(valor3);
-		System.out.println(resultado1.addAvaliacao(valor1)); 		
+		System.out.println(resultado1.addAvaliacao(valor1)); 
+
+		//Criei o vetor para não ter q iniciar o método várias vezes
+		ValorAvaliacao [] vetor2 = resultado1.getAvaliacoes();		
 		for (int contador = 0; contador < 3; contador++) 
 		{
-			System.out.println(resultado1.getAvaliacoes()[contador]);
+			System.out.println(vetor2[contador]);
 		}	
 		System.out.println(resultado1.getAlgoritmo());
 		System.out.println(resultado1.getDataset());
@@ -143,10 +149,14 @@ public class ExperimentoTeste
 		System.out.println(experimento1.addResultado(resultado5)); 
 		experimento1.imprimeResumoExperimento();	
 		System.out.println(experimento1.getMediaResultados("Medida1"));
+
+		//Criei o vetor para não ter q iniciar o método várias vezes
+		float [] vetor3 = experimento1.getValoresResultados("Medida1");		
 		for (int contador = 0; contador < 10; contador++) 
 		{
-			System.out.println(experimento1.getValoresResultados("Medida1")[contador]);	
+			System.out.println(vetor3[contador]);	
 		}
+
 		System.out.println(experimento1.getMediaResultadosPorAlgoritmo("Algoritmo1", "Medida1"));
 		System.out.println(experimento1.getMediaResultadosPorDataset("Dataset1", "Medida1"));
 		System.out.println(experimento1.getMelhorResultado("Medida1"));
@@ -158,10 +168,13 @@ public class ExperimentoTeste
 		System.out.println(experimento1.getDatasetMelhorResultado("Medida2"));		
 		System.out.println(experimento1.getDatasetMelhorResultadoAlgoritmo("Algoritmo1", "Medida1"));	
 		System.out.println(experimento1.getAlgoritmoMelhorResultado("Medida1"));	
-		System.out.println(experimento1.getAlgoritmoMelhorResuladoDataset("Dataset1", "Medida1"));	
+		System.out.println(experimento1.getAlgoritmoMelhorResuladoDataset("Dataset1", "Medida1"));
+
+		//Criei o vetor para não ter q iniciar o método várias vezes
+		String [] vetor4 = experimento1.getNomesAlgoritmosUtilizados();		
 		for (int contador = 0; contador < 10; contador++) 
 		{
-			System.out.println(experimento1.getNomesAlgoritmosUtilizados()[contador]);
+			System.out.println(vetor4[contador]);
 		}		
 
 		//Total = 17 Métodos
